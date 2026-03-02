@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ["go_1_22", "git", "cacert", "python3"]
+
+[phases.build]
+cmds = [
+  "git clone --depth=1 https://github.com/readium/cli.git /tmp/readium-cli",
+  "cd /tmp/readium-cli && go build -o /app/readium ./cmd/readium",
+  "chmod +x /app/readium"
+]
+
+[start]
+cmd = "python3 /app/start.py"
