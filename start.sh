@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 PORT="${PORT:-8080}"
 
 # Start the Readium publication server on internal port 18080
-readium serve --address 0.0.0.0 --port 18080 --file-directory /epubs &
+/app/readium serve --address 0.0.0.0 --port 18080 --file-directory /epubs &
 READIUM_PID=$!
 
 echo "Readium server started on port 18080 (PID: $READIUM_PID)"
