@@ -1,0 +1,95 @@
+{
+    "reader": {
+        "app": {
+            "loading": "Ladataan",
+            "publicationWrapper": "Olet nyt julkaisussa.",
+            "docking": {
+                "dockingLeft": "Kiinnitetty näkymä, vasen",
+                "dockingRight": "Kiinnitetty näkymä, oikea",
+                "dockingEmpty": "Tällä hetkellä tyhjä",
+                "dockingClosed": "Suljettu, sisältää {{ action }}",
+                "dockingCollapsed": "Pienennetty, sisältää {{ action }}"
+            },
+            "header": {
+                "backLink": {
+                    "trigger": "Takaisin kirjastoon",
+                    "tooltip": "Kirjasto"
+                },
+                "label": "Yläpalkki",
+                "runningHead": "Julkaisun otsikko",
+                "actions": "Toiminnot"
+            },
+            "footer": {
+                "label": "Alapalkki"
+            },
+            "progression": {
+                "wrapper": "Edistyminen",
+                "referenceFallback": "nykyinen luku",
+                "pubFallback": "julkaisu"
+            },
+            "docker": {
+                "wrapper": "Kiinnitysvaihtoehdot",
+                "dockToLeft": {
+                    "trigger": "Kiinnitä vasemmalle",
+                    "tooltip": "Kiinnitä vasemmalle"
+                },
+                "dockToRight": {
+                    "trigger": "Kiinnitä oikealle",
+                    "tooltip": "Kiinnitä oikealle"
+                },
+                "popover": {
+                    "trigger": "Näytä ikkunassa",
+                    "tooltip": "Popover-sisältö"
+                },
+                "fullscreen": {
+                    "trigger": "Näytä sisällön päällä",
+                    "tooltip": "Peittokuva"
+                }
+            },
+            "back": {
+                "trigger": "Takaisin"
+            }
+        },
+        "navigation": {
+            "scroll": {
+                "wrapper": "Selaa julkaisua"
+            }
+        },
+        "fullscreen": {
+            "tooltip": "Koko näyttö",
+            "trigger": "Vaihda koko näytön tilaan",
+            "close": "Poistu koko näytön tilasta"
+        },
+        "toc": {
+            "entries": "Luettelon sisältö"
+        },
+        "jumpToPosition": {
+            "go": "Siirry",
+            "label": "Valitse kohta väliltä {{ positionStart }} ja {{ positionEnd }}:"
+        },
+        "overflowMenu": {
+            "active": {
+                "tooltip": "Lisää toimintoja",
+                "trigger": "Valikko"
+            },
+            "hint": {
+                "tooltip": "Toiminnot",
+                "trigger": "Näytä toiminnot"
+            }
+        },
+        "settings": {
+            "text": {
+                "advanced": {
+                    "tooltip": "Lisää vaihtoehtoja",
+                    "trigger": "Lisää muotoiluasetuksia"
+                }
+            },
+            "spacing": {
+                "advanced": {
+                    "tooltip": "Lisää vaihtoehtoja",
+                    "trigger": "Lisää välistysasetuksia"
+                }
+            }
+        }
+    }
+}

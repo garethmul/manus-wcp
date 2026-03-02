@@ -1,0 +1,139 @@
+.readerSettingsGroupLabelDisabled {
+  color: var(--th-theme-disable);
+}
+
+/* Disclosure styles */
+
+.readerSettingsDisclosureLabelDisabled {
+  color: var(--th-theme-disable);
+}
+
+.readerSettingsDisclosure {}
+
+.readerSettingsDisclosureHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: calc(var(--th-layout-spacing) / 2);
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: var(--th-layout-spacing) 0;
+}
+
+.readerSettingsDisclosureButton {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--th-layout-spacing) / 4);
+  margin: 0;
+  background-color: var(--th-theme-background);
+  color: var(--th-theme-text);
+  cursor: pointer;
+  text-align: start;
+  font-weight: normal;
+  flex-grow: 1;
+  align-self: stretch;
+  padding: calc(var(--th-layout-spacing) / 2) calc(var(--th-layout-spacing) / 2) calc(var(--th-layout-spacing) / 2) 0;
+  border-radius: var(--th-layout-radius);
+}
+
+.readerSettingsDisclosureButton[data-hovered] {
+  background-color: var(--th-theme-hover);
+}
+
+.readerSettingsDisclosureButton[data-focus-visible] {
+  outline: 2px solid var(--th-theme-focus);
+}
+
+.readerSettingsDisclosureButton[data-disabled] {
+  color: var(--th-theme-disable);
+}
+
+.readerSettingsDisclosureButton[data-disabled] .readerSettingsChevronIcon svg {
+  fill: var(--th-theme-disable);
+  color: var(--th-theme-disable);
+}
+
+.readerSettingsDisclosureHeaderDropdown {
+  margin: 0;
+}
+
+.readerSettingsDisclosureHeaderDropdownButton {
+  margin: 0;
+}
+
+.readerSettingsDisclosurePanel {
+  padding-inline-start: calc((var(--th-icon-size, 24px) * 5/6));
+}
+
+.readerSettingsChevronIcon {
+  width: calc(var(--th-icon-size, 24px) * 5/6);
+  height: calc(var(--th-icon-size, 24px) * 5/6);
+  flex-shrink: 0;
+}
+
+.readerSettingsChevronIcon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--th-theme-text);
+  transition: rotate 200ms ease-in-out;
+  rotate: 0deg;
+}
+
+.readerSettingsDisclosure[data-expanded] .readerSettingsChevronIcon svg {
+  rotate: 90deg;
+}
+
+.readerSettingsDisclosureButton[data-disabled] .readerSettingsChevronIcon svg {
+  fill: var(--th-theme-disable);
+  color: var(--th-theme-disable);
+}
+
+/* Inline dropdown layout */
+.readerSettingsInlineDropdown {
+  display: flex;
+  align-items: center;
+  margin: calc(var(--layout-spacing) / 2) 0;
+  padding: 0;
+  gap: calc(var(--layout-spacing) / 2);
+  width: 100%;
+}
+
+.readerSettingsInlineDropdownLabel {
+  font-size: 1rem;
+  white-space: nowrap;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.readerSettingsInlineDropdown :global(.thorium_web_reader_settings_dropdownButton) {
+  margin: 0;
+}
+
+.readerSettingsInlineDropdown[data-disabled] {
+  color: var(--th-theme-disable);
+}
+
+.readerSettingsAffordanceIndicator {
+  margin-block: calc(var(--th-layout-spacing) / 2);
+  color: var(--th-theme-text);
+}
+
+.readerSettingsAffordanceIndicatorButton {
+  border-radius: var(--th-layout-radius);
+  border: 1px solid var(--th-theme-subdue);
+  padding: calc(var(--th-layout-spacing) / 2);
+  background-color: var(--th-theme-background);
+  color: var(--th-theme-text);
+}
+
+.readerSettingsAffordanceIndicatorButton[data-hovered] {
+  background-color: var(--th-theme-hover);
+}
+
+.readerSettingsAffordanceIndicatorButton[data-focus-visible] {
+  outline: 2px solid var(--th-theme-focus);
+}
+
+.readerSettingsAffordanceIndicatorButton[data-disabled] {
+  color: var(--th-theme-disable);
+}

@@ -1,0 +1,8 @@
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+
+# Misc
+.DS_Store
+*.log
