@@ -4,7 +4,7 @@ Readium Publication Server launcher.
 Starts the Readium CLI on port 18080, then runs a lightweight
 HTTP proxy on $PORT that:
   - Returns 200 OK on GET / and GET /health (Railway healthcheck)
-  - Proxies all other requests to the Readium server
+  - Forwards all other requests to the Readium server
 """
 import http.server
 import urllib.request
@@ -17,12 +17,31 @@ import time
 
 PORT = int(os.environ.get('PORT', 8080))
 READIUM_PORT = 18080
-READIUM_BIN = '/app/readium'
-EPUBS_DIR = os.path.join(os.path.dirname(__file__), 'epubs')
+
+# Find the readium binary
+for candidate in ['/app/readium', './readium', 'readium']:
+    if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
+        READIUM_BIN = candidate
+        break
+else:
+    # Try to find it anywhere on PATH
+    import shutil
+    READIUM_BIN = shutil.which('readium') or '/app/readium'
+
+# Find the epubs directory
+for candidate in ['/app/epubs', './epubs', '/epubs']:
+    if os.path.isdir(candidate):
+        EPUBS_DIR = candidate
+        break
+else:
+    EPUBS_DIR = '/app/epubs'
+
+print(f"Using readium binary: {READIUM_BIN}", flush=True)
+print(f"Using epubs directory: {EPUBS_DIR}", flush=True)
+print(f"EPUBs available: {os.listdir(EPUBS_DIR) if os.path.isdir(EPUBS_DIR) else 'DIR NOT FOUND'}", flush=True)
 
 # Start the Readium CLI publication server
-print(f"Starting Readium CLI on port {READIUM_PORT}...")
-sys.stdout.flush()
+print(f"Starting Readium CLI on port {READIUM_PORT}...", flush=True)
 
 readium_proc = subprocess.Popen(
     [READIUM_BIN, 'serve',
@@ -35,8 +54,7 @@ readium_proc = subprocess.Popen(
 
 # Give it a moment to start
 time.sleep(2)
-print(f"Readium CLI started (PID {readium_proc.pid})")
-sys.stdout.flush()
+print(f"Readium CLI started (PID {readium_proc.pid})", flush=True)
 
 
 class ProxyHandler(http.server.BaseHTTPRequestHandler):
@@ -101,8 +119,7 @@ def monitor_readium():
     global readium_proc
     while True:
         readium_proc.wait()
-        print("Readium CLI exited, restarting...")
-        sys.stdout.flush()
+        print("Readium CLI exited, restarting...", flush=True)
         time.sleep(1)
         readium_proc = subprocess.Popen(
             [READIUM_BIN, 'serve',
@@ -117,8 +134,7 @@ def monitor_readium():
 monitor_thread = threading.Thread(target=monitor_readium, daemon=True)
 monitor_thread.start()
 
-print(f"Proxy listening on port {PORT}, forwarding to Readium on {READIUM_PORT}")
-sys.stdout.flush()
+print(f"Proxy listening on port {PORT}, forwarding to Readium on {READIUM_PORT}", flush=True)
 
 server = http.server.HTTPServer(('0.0.0.0', PORT), ProxyHandler)
 server.serve_forever()
