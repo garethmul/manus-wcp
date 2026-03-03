@@ -1,11 +1,13 @@
 [phases.setup]
-nixPkgs = ["go_1_22", "git", "cacert", "python3"]
+nixPkgs = ["go_1_22", "python3", "git", "cacert"]
 
 [phases.build]
 cmds = [
-  "git clone --depth=1 https://github.com/readium/cli.git /tmp/readium-cli",
-  "cd /tmp/readium-cli && go build -o /app/readium ./cmd/readium",
-  "chmod +x /app/readium"
+  "git clone --depth=1 https://github.com/readium/cli.git /tmp/readium-cli-src",
+  "cd /tmp/readium-cli-src && go build -o /app/readium ./cmd/readium",
+  "chmod +x /app/readium",
+  "mkdir -p /app/epubs",
+  "cp /app/epubs-src/*.epub /app/epubs/ 2>/dev/null || true"
 ]
 
 [start]
