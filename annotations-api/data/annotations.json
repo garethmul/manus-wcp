@@ -1,0 +1,136 @@
+{
+  "user1": {
+    "alice-in-wonderland": [
+      {
+        "id": "56c2f5c0-34b0-4d34-97b5-cdbeb92d8d83",
+        "type": "bookmark",
+        "createdAt": "2026-03-23T07:45:20.754Z",
+        "updatedAt": "2026-03-23T07:45:20.754Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "title": "Chapter I",
+          "locations": {
+            "progression": 0.25,
+            "position": 42,
+            "cssSelector": "p:nth-child(3)"
+          }
+        }
+      },
+      {
+        "id": "77504aae-7af1-493d-894f-781676df45db",
+        "type": "highlight",
+        "createdAt": "2026-03-23T07:45:20.780Z",
+        "updatedAt": "2026-03-23T07:45:20.780Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "locations": {
+            "progression": 0.3,
+            "cssSelector": "p:nth-child(5)"
+          },
+          "text": {
+            "highlight": "Alice was beginning to get very tired",
+            "before": "So she was considering in her own mind, ",
+            "after": " of sitting by her sister on the bank"
+          }
+        },
+        "colour": "yellow"
+      },
+      {
+        "id": "2f547265-b456-4984-a1b8-d189551803d5",
+        "type": "highlight",
+        "createdAt": "2026-03-23T07:45:29.898Z",
+        "updatedAt": "2026-03-23T07:45:29.898Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "locations": {
+            "progression": 0.3,
+            "cssSelector": "p:nth-child(5)"
+          },
+          "text": {
+            "highlight": "Alice was beginning to get very tired",
+            "before": "So she was considering",
+            "after": " of sitting by her sister"
+          }
+        },
+        "colour": "yellow"
+      },
+      {
+        "id": "735829d9-684c-42f8-a513-94e355a897f6",
+        "type": "note",
+        "createdAt": "2026-03-23T07:45:29.934Z",
+        "updatedAt": "2026-03-23T07:45:29.934Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "locations": {
+            "progression": 0.1
+          },
+          "text": {
+            "highlight": "Alice was beginning to get very tired",
+            "before": "",
+            "after": ""
+          }
+        },
+        "colour": "blue",
+        "noteText": "This is the famous opening line!"
+      },
+      {
+        "id": "dd632597-2f56-4d86-ba16-214d1008ddd9",
+        "type": "bookmark",
+        "createdAt": "2026-03-23T07:45:49.061Z",
+        "updatedAt": "2026-03-23T07:45:49.061Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "title": "Chapter I",
+          "locations": {
+            "progression": 0.25,
+            "position": 42
+          }
+        }
+      },
+      {
+        "id": "cb0e489c-294e-45ce-91ad-07c802c46a1d",
+        "type": "highlight",
+        "createdAt": "2026-03-23T07:45:49.069Z",
+        "updatedAt": "2026-03-23T07:45:49.069Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "locations": {
+            "progression": 0.3
+          },
+          "text": {
+            "highlight": "Alice was beginning to get very tired",
+            "before": "So she was considering",
+            "after": " of sitting by her sister"
+          }
+        },
+        "colour": "yellow"
+      },
+      {
+        "id": "0ecb3b3c-ff28-46fa-875f-1b96ddec23ff",
+        "type": "note",
+        "createdAt": "2026-03-23T07:45:49.077Z",
+        "updatedAt": "2026-03-23T07:45:49.077Z",
+        "locator": {
+          "href": "OEBPS/chapter1.xhtml",
+          "type": "application/xhtml+xml",
+          "locations": {
+            "progression": 0.1
+          },
+          "text": {
+            "highlight": "Alice was beginning to get very tired",
+            "before": "",
+            "after": ""
+          }
+        },
+        "colour": "blue",
+        "noteText": "Famous opening!"
+      }
+    ]
+  }
+}

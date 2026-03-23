@@ -6,3 +6,4 @@ frontend/tsconfig.tsbuildinfo
 # Misc
 .DS_Store
 *.log
+annotations-api/node_modules/
